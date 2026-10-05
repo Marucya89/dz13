@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="ru"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Task.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">dz13</a> &gt; <a href="index.source.html" class="el_package">ru.netology</a> &gt; <span class="el_source">Task.java</span></div><h1>Task.java</h1><pre class="source lang-java linenums">package ru.netology;
+
+import java.util.Objects;
+
+public class Task {
+
+    protected int id;
+
+<span class="fc" id="L9">    public Task(int id) {</span>
+<span class="fc" id="L10">        this.id = id;</span>
+<span class="fc" id="L11">    }</span>
+
+    public int getId() {
+<span class="fc" id="L14">        return id;</span>
+    }
+
+    // Ниже находятся вспомогательные методы для корректной работы equals
+    // Переопределять их в наследниках не нужно
+
+    @Override
+    public boolean equals(Object o) {
+<span class="pc bpc" id="L22" title="1 of 2 branches missed.">        if (this == o) return true;</span>
+<span class="pc bpc" id="L23" title="2 of 4 branches missed.">        if (o == null || getClass() != o.getClass()) return false;</span>
+<span class="fc" id="L24">        Task task = (Task) o;</span>
+<span class="fc bfc" id="L25" title="All 2 branches covered.">        return id == task.id;</span>
+    }
+
+    @Override
+    public int hashCode() {
+<span class="fc" id="L30">        return Objects.hash(id);</span>
+    }
+
+    /**
+     * Метод, проверяющий подходит ли эта задача поисковому запросу.
+     * Эта логика должна быть определена в наследниках, у каждого она будет своя
+     * @param query Поисковый запрос
+     * @return Ответ на вопрос, подходит ли эта задача под поисковый запрос
+     */
+    public boolean matches(String query) {
+<span class="nc" id="L40">        return false;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.5.201910111838</span></div></body></html>
